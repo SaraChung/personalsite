@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
+  
+  body {
+    padding: 0;
+    color: #FFF;
+    line-height: 1.4em;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    background: radial-gradient(ellipse at center, #074e69 0%, #083955 100%) fixed no-repeat;
+  }
+  
+  /* Size of grid */
+  .grid {
+    width: 850px;
+    margin: 100px auto;
+    position: relative;
+  }
+
+  /* Shiny stars around */
+  .grid .star {
+    border: 3px solid #F5E653;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    animation: 2s fade infinite alternate;
+  }
+  .grid .star.star-1 {
+    top: 90px;
+    left: -90px;
+    animation-delay: .1s;
+  }
+  .grid .star.star-2 {
+    top: -60px;
+    right: 300px;
+    animation-delay: .4s;
+  }
+  .grid .star.star-3 {
+    top: 110px;
+    right: 190px;
+    animation-delay: .7s;
+  }
+  .grid .star.star-4 {
+    top: 200px;
+    right: 250px;
+    animation-delay: .9s;
+  }
+  .grid .star.star-5 {
+    top: -30px;
+    left: -30px;
+    animation-delay: .5s;
+  }
+  .grid .star.star-6 {
+    top: 450px;
+    left: 100px;
+    animation-delay: .2s;
+  }
+  .grid .star.star-7 {
+    top: 400px;
+    left: 500px;
+    animation-delay: .8s;
+  }
+  
+  /* Letters on the board */
+  .grid .letters {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 490px;
+    position: relative;
+    z-index: 2;
+  }
+  .grid .letters:hover li {
+    opacity: .3;
+    transition-duration: .6s;
+  }
+  .grid .letters li {
+    margin: 0 3px 3px 0;
+    padding: 0;
+    display: block;
+    float: left;
+    list-style: none;
+    width: 65px;
+    height: 65px;
+    background: rgba(0, 0, 0, 0.23);
+    text-align: center;
+    line-height: 65px;
+    font-size: 25px;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition-duration: .2s;
+    user-select: none;
+    box-shadow: inset 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  .grid .letters li:hover {
+    opacity: 1;
+    transition-duration: .1s;
+    box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+  .grid .letters li:active {
+    transform: scale(0.9);
+    transition-duration: .1s;
+  }
+  .grid .letters li.full-opacity {
+    opacity: 1;
+  }
+  .grid .letters li:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .grid .letters li.light-green {
+    background: #1eb482;
+  }
+  .grid .letters li.green {
+    background: rgba(0, 255, 200, 0.5);
+  }
+  .grid .letters li.blue {
+    background: rgba(50, 170, 255, 0.8);
+  }
+  .grid .letters li.yellow {
+    background: rgba(255, 255, 50, 0.7);
+  }
+
+  /* Headline */
+  .grid .headline {
+    font-size: 50px;
+    line-height: 1.3em;
+    font-weight: 100;
+    margin: 0 0 0 540px;
+    padding-top: 100px;
+  }
+
+  .grid .headline a .social {
+    height: 100px;
+    width: 100px;
+  }
+  @keyframes fade {
+    to {
+      opacity: .2;
+      transform: scale(0.7);
+    }
+  }
