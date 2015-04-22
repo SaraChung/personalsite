@@ -128,11 +128,18 @@
     margin: 0 0 0 540px;
     padding-top: 100px;
   }
-
-  .grid .headline a .social {
-    height: 100px;
-    width: 100px;
+  
+  /* Social media icons */
+  .grid .social {
+    height: 40px;
+    margin: 0 0 0 560px;
   }
+
+  .grid .social i {
+    padding: 10px;
+    color: #38F2BD;
+  }
+
   @keyframes fade {
     to {
       opacity: .2;
